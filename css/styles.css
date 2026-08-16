@@ -89,6 +89,7 @@ a:hover {
   height: 60px;
   width: auto;
   flex-shrink: 0;
+  aspect-ratio: 817 / 319;
 }
 
 .brand-text {
@@ -782,12 +783,19 @@ a:hover {
     display: none;
   }
 
+  .brand {
+    gap: 10px;
+  }
+
   .logo {
-    height: 46px;
+    height: 40px;
   }
 
   .brand-text {
-    font-size: 0.95rem;
+    font-size: clamp(0.62rem, 2.6vw, 0.8rem);
+    padding: 5px 10px;
+    border-radius: 8px;
+    white-space: normal;
   }
 
   .header-inner {
@@ -805,5 +813,31 @@ a:hover {
   .feature-grid,
   .signup-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header .container {
+    padding: 0 16px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .brand {
+    gap: 6px;
+  }
+
+  .brand-text {
+    font-size: clamp(0.6rem, 2.4vw, 0.72rem);
+    padding: 4px 8px;
+    border-radius: 7px;
+  }
+
+  .nav-toggle {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
   }
 }
