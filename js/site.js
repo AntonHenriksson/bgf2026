@@ -1,6 +1,15 @@
 (function () {
   "use strict";
 
+  var brand = document.querySelector(".brand[href='#top']");
+  if (brand) {
+    brand.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    });
+  }
+
   var nav = document.getElementById("nav");
   var toggle = document.getElementById("nav-toggle");
 
