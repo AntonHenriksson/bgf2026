@@ -378,6 +378,22 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.feature-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
 .feature h3 {
   margin: 10px 0 8px;
   font-size: 1.05rem;
@@ -545,6 +561,22 @@ a:hover {
   background: #33301f;
   border-left-color: #c9a24b;
   color: #e3cf97;
+}
+
+/* ---------- Boende ---------- */
+
+.boende-features {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .boende-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* ---------- Signup ---------- */
