@@ -389,9 +389,8 @@ a:hover {
   color: var(--accent);
 }
 
-.feature-icon svg {
-  width: 26px;
-  height: 26px;
+.feature-icon i {
+  font-size: 1.4rem;
 }
 
 .feature h3 {
