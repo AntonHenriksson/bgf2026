@@ -588,12 +588,47 @@ a:hover {
 
 .signup-card {
   display: block;
+  position: relative;
   border: 1px solid var(--line);
   background: var(--surface);
   border-radius: var(--radius);
   padding: 32px;
   color: var(--ink);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.site-map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: auto;
+  border-radius: 0 var(--radius) 0 10px;
+  border: none;
+  opacity: 0.9;
+}
+
+.signup-card:has(.site-map) {
+  padding-top: 12px;
+}
+
+@media (min-width: 641px) {
+  .signup-card:has(.site-map) {
+    padding-right: 196px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-map {
+    position: static;
+    width: 100%;
+    margin: 0 0 16px;
+    opacity: 1;
+  }
+
+  .signup-card:has(.site-map) {
+    padding: 20px;
+  }
 }
 
 .signup-card:hover {
