@@ -275,6 +275,21 @@ a:hover {
   text-align: right;
 }
 
+.hero-media {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-media .hero-figure figcaption {
+  text-align: left;
+}
+
+.hero-media-note {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* ---------- Stats ---------- */
 
 .stats {
